@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV Nachricht Sperrzonen Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #3a0ca3, #f72585);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            max-width: 600px;
+            margin: 60px auto;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        img.logo {
+            width: 120px;
+            margin: 30px auto 10px;
+            display: block;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #ffb3e6;
+            letter-spacing: 1px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ffc2f2;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        select {
+            background-color: #7b2cbf;
+            color: #fff;
+        }
+
+        option.disabled-option {
+            background-color: #4a184e;
+            color: #bbb;
+        }
+
+        button {
+            background-color: #f72585;
+            color: white;
+            font-weight: bold;
+            margin-top: 25px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c9184a;
+        }
+
+        .separator {
+            margin: 20px auto;
+            width: 80%;
+            border-top: 1px solid #ffffff80;
+            display: none;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="logo.png" alt="Logo" class="logo"> <!-- Passe "logo.png" bei Bedarf an -->
+    <div class="container">
+        <h2>GOV NACHRICHT SPERRZONEN GENERATOR</h2>
+
+        <label for="dropdown1">Ort</label>
+        <select id="dropdown1">
+            <option value="Ammunations" class="disabled-option" disabled>Ammunations</option>
+            <option value="Ammunation am Würfelpark">Ammunation am Würfelpark</option>
+            <option value="Ammunation in La Mesa">Ammunation in La Mesa</option>
+            <option value="Ammunation im Einkaufszentrum">Ammunation im Einkaufszentrum</option>
+            <option value="Ammunation in Vescpucci">Ammunation in Vescpucci</option>
+            <option value="Ammunation in Morningwood">Ammunation in Morningwood</option>
+            <option value="Ammunation in Vinewood">Ammunation in Vinewood</option>
+            <option value="Ammunation Chumash">Ammunation Chumash</option>
+            <option value="Ammunation in Sandy Shores">Ammunation in Sandy Shores</option>
+            <option value="Ammunation in Paleto Bay">Ammunation in Paleto Bay</option>
+            <option value="Fraktionen" class="disabled-option" disabled>Fraktionen</option>
+            <option value="Schwarzmarkt">Schwarzmarkt</option>
+            <option value="Marabunta HQ">Marabunta HQ</option>
+            <option value="Grove HQ">Grove HQ</option>
+            <option value="Bloods HQ">Bloods HQ</option>
+            <option value="Vagos HQ">Vagos HQ</option>
+            <option value="Ballas HQ">Ballas HQ</option>
+            <option value="Sinaloa Cartel Anwesen">Sinaloa Cartel Anwesen</option>
+            <option value="24/7 Shops" class="disabled-option" disabled>24/7 Shops</option>
+            <option value="24/7 am Grove HQ">24/7 am Grove HQ</option>
+            <option value="24/7 am Stipclub">24/7 am Stipclub</option>
+            <option value="24/7 in Little Seoul">24/7 in Little Seoul</option>
+            <option value="24/7 im Einkaufszentrum">24/7 im Einkaufszentrum</option>
+            <option value="24/7 in den Vescpucci Kanälen">24/7 in den Vescpucci Kanälen</option>
+            <option value="24/7 in Morningwood">24/7 in Morningwood</option>
+            <option value="24/7 in Richman Glen">24/7 in Richman Glen</option>
+            <option value="24/7 in Vinewood">24/7 in Vinewood</option>
+            <option value="24/7 in Murrieta Heights">24/7 in Murrieta Heights</option>
+            <option value="24/7 im Mirror Park">24/7 im Mirror Park</option>
+            <option value="24/7 in Banham Canyon">24/7 in Banham Canyon</option>
+            <option value="24/7 in der Grand Senora Wüste">24/7 in der Grand Senora Wüste</option>
+            <option value="24/7 in Sandy Shores">24/7 in Sandy Shores</option>
+            <option value="24/7 in Harmony">24/7 in Harmony</option>
+            <option value="24/7 an der Bank in Harmony">24/7 an der Bank in Harmony</option>
+            <option value="24/7 in Grapeseed">24/7 in Grapeseed</option>
+            <option value="24/7 am Mount Chiliad">24/7 am Mount Chiliad</option>
+            <option value="24/7 in Chumash">24/7 in Chumash</option>
+            <option value="24/7 am East East Highway">24/7 am East East Highway</option>
+            <option value="Sonstige Orte" class="disabled-option" disabled>Sonstige Orte</option>
+            <option value="Los Santos Airport">Los Santos Airport</option>
+            <option value="Staatsbank">Staatsbank</option>
+        </select>
+
+        <label for="dropdown2">Umkreis (100-750 Meter):</label>
+        <select id="dropdown2">
+            <option value="100m">100m</option>
+            <option value="150m">150m</option>
+            <option value="200m">200m</option>
+            <option value="250m">250m</option>
+            <option value="300m">300m</option>
+            <option value="350m">350m</option>
+            <option value="400m">400m</option>
+            <option value="450m">450m</option>
+            <option value="500m">500m</option>
+            <option value="550m">550m</option>
+            <option value="600m">600m</option>
+            <option value="650m">650m</option>
+            <option value="700m">700m</option>
+            <option value="750m">750m</option>
+        </select>
+
+        <button onclick="generateText()">GENERIEREN</button>
+
+        <p id="output"></p>
+        <div class="separator" id="separator1"></div>
+        <p id="warning"></p>
+        <div class="separator" id="separator2"></div>
+        <p id="clearance"></p>
+    </div>
+
+    <script>
+        function generateText() {
+            var value1 = document.getElementById("dropdown1").value;
+            var value2 = document.getElementById("dropdown2").value;
+
+            var specialPlaces = ["Schwarzmarkt", "Marabunta HQ", "Grove HQ", "Bloods HQ", "Vagos HQ", "Ballas HQ", "Sinaloa Cartel Anwesen"];
+            var article = "Der";
+
+            if (value1 === "Staatsbank") {
+                article = "Die";
+            } else if (specialPlaces.includes(value1)) {
+                article = "Das";
+            }
+
+            document.getElementById("output").innerText = "ACHTUNG! " + article + " " + value1 + " ist im Umkreis von " + value2 + " eine Sperrzone.";
+            document.getElementById("warning").innerText = "Betreten wird mit Beschuss geahndet!";
+            document.getElementById("clearance").innerText = article + " " + value1 + " ist hiermit keine Sperrzone mehr!";
+
+            document.getElementById("separator1").style.display = "block";
+            document.getElementById("separator2").style.display = "block";
+        }
+    </script>
+</body>
+</html>
